@@ -1,0 +1,28 @@
+.test {
+  background-color: $bg-gray;
+  padding-top: 39px;
+  padding-bottom: 46px;
+  margin-top: 80px;
+  margin-bottom: 73px;
+
+  &__title {
+  }
+
+  &__wrapper {
+    max-width: 414px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}

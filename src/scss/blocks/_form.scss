@@ -1,0 +1,27 @@
+.form {
+  background: $bg-gray;
+  margin-top: 160px;
+  padding: 20px 10px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  input {
+    margin-top: 6px;
+    padding-left: 23px;
+    width: 274px;
+    height: 40px;
+    border: 1px solid $accent;
+    background: #fff;
+  }
+  .button {
+    margin-top: 20px;
+  }
+}

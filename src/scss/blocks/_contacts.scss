@@ -1,0 +1,41 @@
+.foother {
+  padding-bottom: 37px;
+  &__title {
+    margin-top: 57px;
+    font-weight: 450;
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__location {
+    margin-right: 50px;
+  }
+
+  &__item {
+    line-height: 23px;
+    margin-top: 13px;
+    padding-left: 37px;
+  }
+
+  &__place {
+    background: url("/img/icons/loc.png") no-repeat;
+  }
+  &__building {
+    background: url("/img/icons/place.png") no-repeat;
+  }
+  &__phone {
+    background: url("/img/icons/phone.png") no-repeat;
+  }
+  &__mail {
+    background: url("/img/icons/mail.png") no-repeat;
+  }
+
+  &__map {
+    max-height: 290px;
+  }
+}

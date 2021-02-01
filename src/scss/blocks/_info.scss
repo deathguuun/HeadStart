@@ -1,0 +1,28 @@
+.info {
+  margin-top: 80px;
+  background: url("/img/headstat.jpg") right no-repeat;
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 28px;
+    margin-right: 133px;
+    &:first-child {
+      margin-top: 51px;
+    }
+    &:last-child {
+      margin-top: 63px;
+    }
+  }
+
+  &__photo {
+    margin-right: 70px;
+  }
+}

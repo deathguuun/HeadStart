@@ -1,0 +1,21 @@
+$main: rgba(0, 0, 0, 0.8);
+$accent: #da2129;
+$bg-gray: rgba(229, 229, 229, 0.5);
+
+body {
+  color: $main;
+}
+span {
+  color: $accent;
+}
+a {
+  color: $main;
+}
+
+@mixin border-default($size) {
+  border: $size solid $accent;
+}
+
+.sidebar {
+  @include border-default(5px);
+}

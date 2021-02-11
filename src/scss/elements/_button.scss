@@ -39,3 +39,14 @@
     }
   }
 }
+
+.border {
+  border: 1px solid red;
+  background: green;
+
+  &--xl {
+    border: 1px solid rgb(206, 226, 20);
+    background: rgb(131, 185, 131);
+    margin: 10px 10px 10px;
+  }
+}

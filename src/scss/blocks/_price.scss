@@ -26,7 +26,7 @@
     justify-content: space-between;
   }
 
-  &__lol .active-tab {
+  &__wrapper .active-tab {
     display: flex;
   }
   &__lesson {
@@ -42,9 +42,18 @@
   }
 
   &__box {
-    border: 1px solid $accent;
-    padding: 48px 24px 58px 24px;
-    transition: 0.2s linear;
+    flex-basis: 200px;
+    box-sizing: border-box;
+    // border: 1px solid $accent;
+    margin: 10px;
+    padding: 38px 14px 48px 14px;
+
+    transition: 0.05s ease-in;
+
+    &:hover {
+      margin: 0px;
+      padding: 48px 24px 58px 24px;
+    }
   }
 
   &__box-wrapper {
@@ -72,7 +81,7 @@
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    margin-top: -20px;
+    // margin-top: -20px;
   }
   &__button {
     margin-top: 29px;

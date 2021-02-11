@@ -52,3 +52,36 @@
     margin: 0px 45px 70px 45px;
   }
 }
+
+@include lg-d {
+  .advantages {
+    .container {
+      max-width: 880px;
+    }
+    &__column {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__box {
+      margin: 30px 30px;
+      &:first-child {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+@include md-d {
+  .advantages {
+    &__box {
+      flex-basis: 280px;
+    }
+  }
+}
+
+@include sm-d {
+  .advantages {
+    &__box {
+      flex-basis: 345px;
+    }
+  }
+}

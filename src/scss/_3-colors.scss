@@ -11,11 +11,3 @@ span {
 a {
   color: $main;
 }
-
-@mixin border-default($size) {
-  border: $size solid $accent;
-}
-
-.sidebar {
-  @include border-default(5px);
-}

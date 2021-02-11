@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-    <title>HeadStart</title>
+    <title>HeadStat</title>
     <link rel="stylesheet" href="build/main.css" />
   </head>
 
@@ -302,9 +302,9 @@
           </label>
         </div>
 
-        <div class="price__lol">
+        <div class="price__wrapper">
           <div class="price__content">
-            <div class="price__box">
+            <div class="price__box border">
               <div class="price__box-name">Групові заняття</div>
               <p class="price__box-check">3-6 чоловік</p>
               <p class="price__box-check">60 хвилин заняття</p>
@@ -312,7 +312,8 @@
               <div class="price__box-uan">грн./місяць</div>
               <div class="button button--white price__button">Записатися</div>
             </div>
-            <div class="price__box">
+
+            <div class="price__box border">
               <div class="price__box-wrapper">
                 <div class="price__box-name">Парні заняття</div>
                 <p class="price__box-check">2 учня на занятті</p>
@@ -322,7 +323,8 @@
                 <div class="button button--white price__button">Записатися</div>
               </div>
             </div>
-            <div class="price__box">
+
+            <div class="price__box border">
               <div class="price__box-name">Індивідуальне навчання</div>
               <p class="price__box-check">1 учень на занятті</p>
               <p class="price__box-check">45 хвилин заняття</p>
@@ -421,60 +423,75 @@
 
     <section class="review">
       <h2>Відгуки наших студентів</h2>
-      <div class="small-container">
-        <div class="review__wrapper">
-          <div class="slider-review">
-            <div class="slider__item">
-              <img src="/img/reviews/reviews-1.jpg" alt="" />
-              <div class="review__name">Людмила</div>
-              <div class="review__quote">
-                Моє знайомство з чарівними педагогами мовної школи Head Start
-                розпочалось ще у 2014 році, коли стало питання додаткових курсів
-                з англійскої для синів. Выбирала, щоби близенько було біля дома.
-                Але не помилилась, бо всі ці роки мої сини получали гарні,
-                професійні знання, ефективну методику та підтримку! Про це
-                свідчать результати ЗНО! 191 та 187. А тепер прийшла моя черга
-                вчити англійську мову і я не вагаючись звернулась за допомогою
-                до школи! Сподіваюсь, що буду знати англійську не гірше, а може
-                і краще синів!
-              </div>
-            </div>
-            <div class="slider__item">
-              <img src="/img/reviews/reviews-2.jpg" alt="" />
-              <div class="review__name">Сніжана</div>
-              <div class="review__quote">
-                Центр вивчення іноземних мов Head Start — справжнє відкриття 
-                для мене. Приємні й ініціативні викладачі, які створюють  дружню
-                атмосферу під час занять. Їхній цікавий, креативний підхід до
-                навчання дав мені ще більшу мотивацію опановувати іноземну мову.
-                Зручний розклад, сучасні матеріали, багато розмовної практики
-                справді роблять Head Start особливим.
-              </div>
-            </div>
-            <div class="slider__item">
-              <img src="/img/reviews/reviews-3.jpg" alt="" />
-              <div class="review__name">Дарья</div>
-              <div class="review__quote">
-                Испанский учу для себя. Пока без каких-то конкретных целей. Учу
-                с нуля. Занимаюсь почти год и уже могу говорить. Занятия
-                интересные и самое главное дают результат! Определенно могу
-                рекомендовать эту школу.
-              </div>
-            </div>
-            <div class="slider__item">
-              <img src="/img/reviews/reviews-4.jpg" alt="" />
-              <div class="review__name">Оксана</div>
-              <div class="review__quote">
-                Мені дуже допомагають у житті уроки англійської мови у центрі
-                "Head Start", займаюся вже рік, на роботі - все чудово! можу
-                спокійно спілкуватися з Native Speakers і виконувати міжнародні
-                доручення шефа. Та й сама тепер мрію стати вчителем... Пішла в
-                університет перекваліфіковуватися)) Мій педагог Надія -
-                надзвичайно ніжна, турботлива, чуйна, добра та розумна, я завжди
-                біжу на заннятя із захопленням.
-              </div>
-            </div>
+      <div class="small-container reviev__intro">
+        <div class="review__slider review__wrapper">
+          <div class="review__img">
+            <img src="img/reviews/reviews-1.jpg" alt="" />
           </div>
+          <div class="review__img">
+            <img src="img/reviews/reviews-2.jpg" alt="" />
+          </div>
+          <div class="review__img">
+            <img src="img/reviews/reviews-3.jpg" alt="" />
+          </div>
+          <div class="review__img">
+            <img src="img/reviews/reviews-4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="review__text">
+        <div class="review__content">
+          <div class="review__title">Людмила</div>
+          <div class="review__quote">
+            Моє знайомство з чарівними педагогами мовної школи Head Start
+            розпочалось ще у 2014 році, коли стало питання додаткових курсів з
+            англійскої для синів. Выбирала, щоби близенько було біля дома. Але
+            не помилилась, бо всі ці роки мої сини получали гарні, професійні
+            знання, ефективну методику та підтримку! Про це свідчать результати
+            ЗНО! 191 та 187. А тепер прийшла моя черга вчити англійську мову і я
+            не вагаючись звернулась за допомогою до школи! Сподіваюсь, що буду
+            знати англійську не гірше, а може і краще синів!
+          </div>
+        </div>
+        <div class="review__content slider__text">
+          <h3 class="review__title">Людмила</h3>
+          <p class="review__quote">
+            Моє знайомство з чарівними педагогами мовної школи Head Start
+            розпочалось ще у 2014 році, коли стало питання додаткових курсів з
+            англійскої для синів. Выбирала, щоби близенько було біля дома. Але
+            не помилилась, бо всі ці роки мої сини получали гарні, професійні
+            знання, ефективну методику та підтримку! Про це свідчать результати
+            ЗНО! 191 та 187. А тепер прийшла моя черга вчити англійську мову і я
+            не вагаючись звернулась за допомогою до школи! Сподіваюсь, що буду
+            знати англійську не гірше, а може і краще синів!
+          </p>
+        </div>
+        <div class="review__content slider__text">
+          <h3 class="review__title">Людмила</h3>
+          <p class="review__quote">
+            Моє знайомство з чарівними педагогами мовної школи Head Start
+            розпочалось ще у 2014 році, коли стало питання додаткових курсів з
+            англійскої для синів. Выбирала, щоби близенько було біля дома. Але
+            не помилилась, бо всі ці роки мої сини получали гарні, професійні
+            знання, ефективну методику та підтримку! Про це свідчать результати
+            ЗНО! 191 та 187. А тепер прийшла моя черга вчити англійську мову і я
+            не вагаючись звернулась за допомогою до школи! Сподіваюсь, що буду
+            знати англійську не гірше, а може і краще синів!
+          </p>
+        </div>
+        <div class="review__content slider__text">
+          <h3 class="review__title">Людмила</h3>
+          <p class="review__quote">
+            Моє знайомство з чарівними педагогами мовної школи Head Start
+            розпочалось ще у 2014 році, коли стало питання додаткових курсів з
+            англійскої для синів. Выбирала, щоби близенько було біля дома. Але
+            не помилилась, бо всі ці роки мої сини получали гарні, професійні
+            знання, ефективну методику та підтримку! Про це свідчать результати
+            ЗНО! 191 та 187. А тепер прийшла моя черга вчити англійську мову і я
+            не вагаючись звернулась за допомогою до школи! Сподіваюсь, що буду
+            знати англійську не гірше, а може і краще синів!
+          </p>
         </div>
       </div>
     </section>
@@ -517,7 +534,6 @@
       </div>
     </footer>
 
-    <!--Slider-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>

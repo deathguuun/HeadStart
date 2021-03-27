@@ -64,23 +64,22 @@ $(document).ready(function () {
     }]
   }); //Slider REVIEW
 
-  $('.review__slider').slick({
+  $('.review__item').slick({
+    centerMode: true,
+    centerPadding: '20px',
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    focusOnSelect: true,
-    centerPadding: '10px',
-    centerMode: true,
-    asNavFor: '.review__text'
+    asNavFor: '.review__content'
   });
-  $('.review__text').slick({
+  $('.review__content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     draggable: false,
     fade: true,
-    asNavFor: '.review__slider'
+    asNavFor: '.review__item'
   });
 });
 

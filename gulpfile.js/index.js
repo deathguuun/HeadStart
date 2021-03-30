@@ -1,22 +1,22 @@
 global.$ = {
-    gulp: require('gulp'),
-    gp: require('gulp-load-plugins')(),
-    bs: require('browser-sync').create(),
+	gulp: require('gulp'),
+	gp: require('gulp-load-plugins')(),
+	bs: require('browser-sync').create(),
 }
 
 require('./paths');
 require('./tasks');
 
 const {
-    gulp
+	gulp
 } = $
 
 //'svg' commented
 const doMagic = gulp.parallel('img', 'copy', 'php', 'html', 'styles', 'scripts:build', 'vendors', 'svg');
 
 gulp.task('build', gulp.series(
-    'clean',
-    doMagic
+	'clean',
+	doMagic
 ));
 
 gulp.task('dev', gulp.parallel('serve', 'watch', 'scripts:watch'));

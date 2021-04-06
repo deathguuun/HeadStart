@@ -42,6 +42,7 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 		slidesToShow: 2,
 		slidesToScroll: 2,
+		adaptiveHeight: false,
 		responsive: [
 			{
 				breakpoint: 900,
@@ -51,12 +52,24 @@ $(document).ready(function () {
 				}
 			},
 			{
+				breakpoint: 575,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+					dots: true,
+				}
+			},
+			{
 				breakpoint: 420,
 				settings: {
+					arrows: false,
 					autoplay: true,
-					dots: false,
+					slidesToScroll: 1,
 					slidesToShow: 1,
-					centerMode: false,
+					dots: true,
+					adaptiveHeight: true,
 				}
 			}
 		]

@@ -15,6 +15,8 @@ $(window).on('load', function () {
 },{"./main.js":2}],2:[function(require,module,exports){
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //HEADER slide
 (function () {
   var header = document.querySelector('.header');
@@ -41,6 +43,8 @@ $(".price .price__lesson").click(function () {
 }).eq(0).addClass("active-tab"); //PRICE HOVER
 
 $(document).ready(function () {
+  var _$$slick;
+
   $(".price__button").hover(function () {
     $(".price__box").removeClass("border");
     $(".price__box").addClass("border--xl"), function () {
@@ -49,26 +53,36 @@ $(document).ready(function () {
     };
   }); //Slider TEAM
 
-  $('.slider').slick({
+  $('.slider').slick((_$$slick = {
     adaptiveHeight: true,
     slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [{
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 420,
-      settings: {
-        autoplay: true,
-        dots: false,
-        slidesToShow: 1,
-        centerMode: false
-      }
-    }]
-  }); //Slider REVIEW
+    slidesToScroll: 2
+  }, _defineProperty(_$$slick, "adaptiveHeight", false), _defineProperty(_$$slick, "responsive", [{
+    breakpoint: 900,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 575,
+    settings: {
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: true
+    }
+  }, {
+    breakpoint: 420,
+    settings: {
+      arrows: false,
+      autoplay: true,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      dots: true,
+      adaptiveHeight: true
+    }
+  }]), _$$slick)); //Slider REVIEW
 
   $('.review__item').slick({
     centerMode: true,

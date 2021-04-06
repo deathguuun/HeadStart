@@ -1,28 +1,78 @@
 .info {
-  margin-top: 80px;
-  background: url("../img/headstat.jpg") right no-repeat;
+	margin-top: 80px;
+	background: url("../img/headstat.jpg") right no-repeat;
 
-  &__title {
-    margin-bottom: 23px;
-  }
+	&__title {
+		margin-bottom: 23px;
+	}
 
-  &__wrapper {
-    display: flex;
-  }
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
 
-  &__text {
-    font-size: 22px;
-    line-height: 28px;
-    margin-right: 133px;
-    &:first-child {
-      margin-top: 51px;
-    }
-    &:last-child {
-      margin-top: 63px;
-    }
-  }
+	&__text {
+		font-size: 22px;
+		line-height: 28px;
+		margin-right: 133px;
+		&:first-child {
+		}
+		&:last-child {
+			margin-top: 63px;
+		}
+	}
 
-  &__photo {
-    margin-right: 70px;
-  }
+	&__photo {
+		margin-right: 70px;
+	}
+}
+
+@include xl-d {
+	.info {
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__wrapper {
+		}
+		&__text {
+			margin-right: 55px;
+			margin-left: 15px;
+		}
+		&__photo img {
+			max-width: 455px;
+		}
+	}
+}
+
+@include lg-d {
+	.info {
+		background-position: center;
+		background-size: contain;
+		&__wrapper {
+			flex-direction: column;
+		}
+		&__text {
+			margin-right: 15px;
+		}
+		&__photo {
+			margin-top: 40px;
+			margin-right: 0;
+		}
+	}
+}
+
+@include sm-d {
+	.info {
+		&__photo {
+			display: none;
+		}
+	}
+}
+
+@include xs-d {
+	.info {
+		&__text {
+			font-size: 18px;
+		}
+	}
 }

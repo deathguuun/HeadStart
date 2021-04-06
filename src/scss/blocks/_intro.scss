@@ -14,15 +14,18 @@
 	}
 
 	&__button {
+		margin-top: 52px;
 	}
 }
 
 @include sm-d {
 	.intro {
 		padding-left: 0px;
-		display: flex;
-		flex-direction: column;
+
 		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 		&__button {
 		}

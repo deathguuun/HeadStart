@@ -12,6 +12,19 @@
 		font-size: 24px;
 		line-height: 31px;
 		margin-bottom: 72px;
+		@include lg-d {
+			flex-wrap: wrap;
+		}
+	}
+	&__lesson {
+		@include md-d {
+			margin-top: 15px;
+			flex: 0 0 50%;
+			text-align: center;
+		}
+		@include xs-d {
+			flex: 0 0 100%;
+		}
 	}
 
 	.active-tab {
@@ -91,5 +104,29 @@
 		text-align: center;
 		font-size: 22px;
 		line-height: 28px;
+	}
+}
+@include lg-d {
+	.price {
+		&__content {
+			flex-wrap: wrap;
+		}
+		&__box {
+			margin-top: 20px;
+		}
+	}
+}
+@include md-d {
+	.price {
+		&__title {
+			padding-top: 30px;
+		}
+	}
+}
+@include xs-d {
+	.price {
+		.small-container {
+			margin-top: 30px;
+		}
 	}
 }

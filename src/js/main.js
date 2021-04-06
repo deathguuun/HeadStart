@@ -84,8 +84,29 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
+		responsive: [
+			{
+				breakpoint: 775,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+				}
+			},
+		],
 		arrows: true,
 		asNavFor: '.review__content',
+		adaptiveHeight: false,
+
 	});
 
 

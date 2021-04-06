@@ -26,8 +26,14 @@ $(window).on('load', function () {
       header.classList.remove('header__active');
     }
   };
-})(); //PRICE TAB
+})();
 
+$(document).ready(function () {
+  $('.header__burger').click(function (event) {
+    $('.header__burger,.header__menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+}); //PRICE TAB
 
 $(".price .price__lesson").click(function () {
   $(".price .price__lesson").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
@@ -79,7 +85,8 @@ $(document).ready(function () {
     arrows: false,
     draggable: false,
     fade: true,
-    asNavFor: '.review__item'
+    asNavFor: '.review__item',
+    adaptiveHeight: false
   });
 });
 

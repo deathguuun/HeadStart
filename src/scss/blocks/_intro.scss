@@ -1,21 +1,30 @@
 .intro {
-  background: url("../img/background-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 234px;
-  margin-top: 145px;
-  margin-bottom: 42px;
+	background: url("../img/background-bg.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 234px;
+	margin-top: 145px;
+	margin-bottom: 42px;
+	padding-left: 30px;
 
-  &__title {
-    margin-left: 30px;
-    font-weight: 450;
-    font-size: 48px;
-    line-height: 62px;
-    padding-top: 170px;
-    margin-bottom: 52px;
-  }
+	&__title {
+		@include adaptive-font(48, 26);
 
-  &__button {
-    margin-left: 30px;
-  }
+		padding-top: 170px;
+	}
+
+	&__button {
+	}
+}
+
+@include sm-d {
+	.intro {
+		padding-left: 0px;
+		display: flex;
+		flex-direction: column;
+		.container {
+		}
+		&__button {
+		}
+	}
 }

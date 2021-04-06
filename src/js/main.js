@@ -10,6 +10,13 @@
 	};
 }());
 
+$(document).ready(function () {
+	$('.header__burger').click(function (event) {
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	})
+})
+
 //PRICE TAB
 
 $(".price .price__lesson").click(function () {
@@ -75,7 +82,8 @@ $(document).ready(function () {
 		arrows: false,
 		draggable: false,
 		fade: true,
-		asNavFor: '.review__item'
+		asNavFor: '.review__item',
+		adaptiveHeight: false,
 	});
 });
 

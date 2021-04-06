@@ -1,118 +1,118 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  transition: 0.15s linear;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: 0.15s linear;
 
-  &__active {
-    margin-top: -25px;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 2px solid $accent;
-  }
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 19px;
-  }
-  &__logo {
-    margin-right: 170px;
-  }
-  &__menu {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 18px;
-    line-height: 23px;
-  }
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__item {
-    margin-left: 60px;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-  &__link {
-    transition: 0.15s linear;
-    &:hover {
-      color: $accent;
-    }
-  }
-  &__language {
-    display: flex;
-    margin-left: 60px;
-    a {
-      transition: 0.15s linear;
-    }
-    a:hover {
-      color: $accent;
-    }
-  }
-  &__contacts {
-    margin-left: 65px;
-    font-weight: 450;
-    font-size: 20px;
-    line-height: 26px;
-    white-space: nowrap;
-  }
-  &__phone {
-    padding-left: 33px;
-    background: url("../img/icons/phone-1.png") no-repeat;
-    background-size: contain;
-    background-position: left;
-    display: flex;
-    flex-wrap: nowrap;
-  }
+	&__active {
+		margin-top: -25px;
+		background: rgba(255, 255, 255, 0.97);
+		border-bottom: 2px solid $accent;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: 19px;
+	}
+	&__logo {
+		margin-right: 170px;
+	}
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 18px;
+		line-height: 23px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		margin-left: 60px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	&__link {
+		transition: 0.15s linear;
+		&:hover {
+			color: $accent;
+		}
+	}
+	&__language {
+		display: flex;
+		margin-left: 60px;
+		a {
+			transition: 0.15s linear;
+		}
+		a:hover {
+			color: $accent;
+		}
+	}
+	&__contacts {
+		margin-left: 65px;
+		font-weight: 450;
+		font-size: 20px;
+		line-height: 26px;
+		white-space: nowrap;
+	}
+	&__phone {
+		padding-left: 33px;
+		background: url("../img/icons/phone-1.png") no-repeat;
+		background-size: contain;
+		background-position: left;
+		display: flex;
+		flex-wrap: nowrap;
+	}
 }
 
 @include xl-d {
-  .header {
-    &__wrapper {
-      justify-content: space-between;
-    }
-    &__logo {
-      max-width: 220px;
-    }
-    &__item {
-      margin-left: 30px;
-    }
-    &__language {
-      margin-left: 40px;
-    }
-    .header__logo {
-      margin-right: 30px;
-    }
-    &__contacts {
-      margin-left: 30px;
-    }
-  }
+	.header {
+		&__wrapper {
+			justify-content: space-between;
+		}
+		&__logo {
+			max-width: 220px;
+		}
+		&__item {
+			margin-left: 30px;
+		}
+		&__language {
+			margin-left: 40px;
+		}
+		.header__logo {
+			margin-right: 30px;
+		}
+		&__contacts {
+			margin-left: 30px;
+		}
+	}
 }
 @include lg-d {
-  .header {
-    &__wrapper {
-      justify-content: space-around;
-      min-height: 103px;
-    }
-  }
-  .logo {
-    display: none;
-  }
+	.header {
+		&__wrapper {
+			justify-content: space-around;
+			min-height: 103px;
+		}
+	}
+	.logo {
+		display: none;
+	}
 }
 @include md-d {
-  .header {
-    &__phone {
-      display: none;
-    }
-  }
+	.header {
+		&__phone {
+			display: none;
+		}
+	}
 }
 @include sm-d {
-  .header {
-    &__item {
-      min-width: 32%;
-    }
-  }
+	.header {
+		&__item {
+			min-width: 32%;
+		}
+	}
 }

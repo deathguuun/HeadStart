@@ -1,9 +1,17 @@
+$headerColor: rgba(255, 255, 255, 0.95);
+$headerTextColor: rgba(0, 0, 0, 0.7);
+
+//ADAPTIVE header
+$headerBurgerColor: $accent;
+.lock {
+	overflow: hidden;
+}
 .header {
 	position: fixed;
+	width: 100%;
 	top: 0;
 	left: 0;
-	width: 100%;
-	z-index: 100;
+	z-index: 1000;
 	transition: 0.15s linear;
 	&::before {
 		content: "";
@@ -12,6 +20,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		background-color: $headerColor;
 		z-index: 2;
 	}
 	&__active {
@@ -19,49 +28,46 @@
 		background: rgba(255, 255, 255, 0.97);
 		border-bottom: 2px solid $accent;
 	}
-	&__wrapper {
+	&__body {
+		margin-top: 19px;
 		position: relative;
 		display: flex;
-		flex-wrap: wrap;
+		justify-content: space-between;
+		height: 103px;
 		align-items: center;
-		margin-top: 19px;
+	}
+
+	&__burger {
+		display: none;
 	}
 	&__logo {
-		margin-right: 170px;
+		flex: 0 0 279px;
+		overflow: hidden;
+		position: relative;
+		z-index: 3;
 	}
-	&__menu {
-		display: flex;
-		flex-wrap: wrap;
-		font-size: 18px;
-		line-height: 23px;
+	&__logo img {
+		max-width: 100%;
+		display: block;
 	}
+
 	&__list {
+		display: flex;
 		position: relative;
 		z-index: 2;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	&__item {
-		margin-left: 60px;
-		&:first-child {
-			margin-left: 0;
+		& li a {
+			font-size: 18px;
+			line-height: 23px;
+			white-space: nowrap;
+			&:hover {
+				transition: all 0.3s ease;
+				color: $accent;
+			}
 		}
 	}
 	&__link {
-		transition: 0.15s linear;
-		&:hover {
-			color: $accent;
-		}
-	}
-	&__language {
-		display: flex;
 		margin-left: 60px;
-		a {
-			transition: 0.15s linear;
-		}
-		a:hover {
-			color: $accent;
-		}
+		color: $headerTextColor;
 	}
 	&__contacts {
 		margin-left: 65px;
@@ -69,35 +75,108 @@
 		font-size: 20px;
 		line-height: 26px;
 		white-space: nowrap;
+		display: flex;
+		justify-content: center;
 	}
 	&__phone {
-		padding-left: 33px;
+		padding-left: 25px;
 		background: url("../img/icons/phone-1.png") no-repeat;
 		background-size: contain;
 		background-position: left;
 		display: flex;
 		flex-wrap: nowrap;
 	}
-	&__burger {
-		display: none;
+	&__language {
+		margin-left: 60px;
+	}
+	@include md-d {
+		.header {
+			&__body {
+				height: 40px;
+			}
+			&__logo {
+				flex: 0 0 70px;
+			}
+			&__burger {
+				display: block;
+				position: relative;
+				width: 30px;
+				height: 20px;
+
+				z-index: 5;
+			}
+			&__burger span {
+				position: absolute;
+				background-color: $headerBurgerColor;
+				left: 0;
+				width: 100%;
+				top: 9px;
+				height: 2px;
+				transition: all 0.3s ease 0s;
+			}
+			&__burger::before,
+			&__burger::after {
+				content: "";
+				background-color: $headerBurgerColor;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+			}
+			&__burger::before {
+				top: 0;
+			}
+			&__burger::after {
+				bottom: 0;
+			}
+			&__burger.active span {
+				transform: scale(0);
+			}
+			&__burger.active::before {
+				transform: rotate(45deg);
+				top: 9px;
+			}
+			&__burger.active::after {
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+			&__menu {
+				position: fixed;
+				top: -100%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $headerColor;
+				padding: 70px 10px 20px 10px;
+				transition: all 0.3s ease 0s;
+				overflow: auto;
+			}
+			&__menu.active {
+				top: 0;
+			}
+			&__list {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+			}
+			&__list li {
+				margin: 0px 0px 20px 0px;
+			}
+			&__link {
+				margin-left: 0;
+				font-size: 30px;
+			}
+		}
 	}
 }
+
 @include xl-d {
 	.header {
-		&__wrapper {
-			justify-content: space-between;
-		}
-		&__logo {
-			max-width: 220px;
-		}
-		&__item {
-			margin-left: 30px;
-		}
-		&__language {
-			margin-left: 40px;
-		}
-		.header__logo {
-			margin-right: 30px;
+		&__link {
+			margin-left: 25px;
 		}
 		&__contacts {
 			margin-left: 30px;
@@ -106,100 +185,30 @@
 }
 @include lg-d {
 	.header {
-		&__wrapper {
-			justify-content: space-around;
-			height: 103px;
+		&__body {
+			height: 70px;
 		}
-	}
-	.logo {
-		display: none;
+		&__logo {
+			flex: 0 0 179px;
+		}
+		&__link {
+			margin-left: 12px;
+		}
+		&__language {
+			margin-left: 20px;
+		}
+		&__contacts {
+			margin-left: 22px;
+		}
 	}
 }
 @include md-d {
 	.header {
-		&__phone {
+		&__active {
+			margin-top: 0;
 		}
-		&__wrapper {
-			height: 50px;
-			position: relative;
-		}
-		&__burger {
-			display: block;
-			width: 30px;
-			height: 20px;
-			position: relative;
-			z-index: 5;
-		}
-		&__burger span {
-			position: absolute;
-			background-color: $accent;
-			left: 0;
-			width: 100%;
-			top: 9px;
-			height: 2px;
-			transition: all 0.3s ease 0s;
-		}
-		&__burger::before,
-		&__burger::after {
-			content: "";
-			background-color: $accent;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			left: 0;
-			transition: all 0.3s ease 0s;
-		}
-		&__burger::before {
-			top: 0;
-		}
-		&__burger::after {
-			bottom: 0;
-		}
-		&__burger.active span {
-			transform: scale(0);
-		}
-		&__burger.active::before {
-			transform: rotate(45deg);
-			top: 9px;
-		}
-		&__burger.active::after {
-			transform: rotate(-45deg);
-			bottom: 9px;
-		}
-		&__menu {
-			position: fixed;
-			top: -100%;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(255, 255, 255, 0.9);
-			padding: 70px 10px 20px 10px;
-			transition: all 0.3s ease 0s;
-			overflow: auto;
-			align-items: center;
-			justify-content: center;
-		}
-		&__menu.active {
-			top: 0;
-		}
-		&__list {
-			display: block;
-			text-align: center;
-		}
-		&__list li {
-			margin: 0px 0px 20px 0px;
-		}
-		&__link {
-			margin-left: 0;
-			font-size: 30px;
-		}
-		&__language {
-		}
-	}
-}
-@include sm-d {
-	.header {
-		&__item {
+		&__body {
+			margin-top: 0;
 		}
 	}
 }

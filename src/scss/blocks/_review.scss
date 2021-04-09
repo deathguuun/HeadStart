@@ -5,13 +5,15 @@
 		@include adaptive-font(48, 30);
 		text-align: center;
 		margin-bottom: 96px;
-		@include sm-d {
-		}
 	}
 
 	&__item {
 		min-width: 0;
 		position: relative;
+		& .slick-track {
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__img {
@@ -20,7 +22,7 @@
 			height: 180px;
 			border-radius: 50%;
 			cursor: pointer;
-			display: inline-block !important;
+			display: inline-block;
 		}
 	}
 
@@ -45,6 +47,7 @@
 
 	.slick-track {
 		display: flex;
+
 		text-align: center;
 	}
 	.slick-list {

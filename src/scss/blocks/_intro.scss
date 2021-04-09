@@ -4,12 +4,11 @@
 	background-position: center;
 	padding-bottom: 234px;
 	margin-top: 145px;
-	margin-bottom: 42px;
+
 	padding-left: 30px;
 
 	&__title {
 		@include adaptive-font(48, 26);
-
 		padding-top: 170px;
 	}
 
@@ -17,7 +16,16 @@
 		margin-top: 52px;
 	}
 }
-
+@include lg-d {
+	.intro {
+		margin-top: 110px;
+	}
+}
+@include md-d {
+	.intro {
+		margin-top: 40px;
+	}
+}
 @include sm-d {
 	.intro {
 		padding-left: 0px;
@@ -26,8 +34,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-		}
-		&__button {
 		}
 	}
 }

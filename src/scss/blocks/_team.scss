@@ -105,6 +105,9 @@
 }
 @include sm-d {
 	.team {
+		&__title {
+			text-align: center;
+		}
 		.slick-arrow {
 			margin: 0 10px;
 		}

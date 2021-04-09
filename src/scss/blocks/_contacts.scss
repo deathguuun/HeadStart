@@ -49,6 +49,9 @@
 }
 @include sm-d {
 	.footer {
+		&__title {
+			text-align: center;
+		}
 		&__contact {
 			flex-wrap: wrap;
 		}

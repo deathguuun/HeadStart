@@ -15,6 +15,8 @@ $(window).on('load', function () {
 },{"./main.js":2}],2:[function(require,module,exports){
 "use strict";
 
+var _$$slick;
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //HEADER slide
@@ -28,7 +30,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       header.classList.remove('header__active');
     }
   };
-})();
+})(); //ANCHOR slide
+
+
+$(document).ready(function () {
+  $('a[href^="#"]').bind("click", function (e) {
+    var anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $(anchor.attr('href')).offset().top - 100
+    }, 800);
+    e.preventDefault();
+  });
+  return false;
+}); //Header BURGER
 
 $(document).ready(function () {
   $('.header__burger').click(function (event) {
@@ -40,85 +54,73 @@ $(document).ready(function () {
 $(".price .price__lesson").click(function () {
   $(".price .price__lesson").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
   $(".price .price__content").hide().eq($(this).index()).fadeIn().css("display", "flex").css("justify-content", "space-around");
-}).eq(0).addClass("active-tab"); //PRICE HOVER
+}).eq(0).addClass("active-tab"); //Slider TEAM
 
-$(document).ready(function () {
-  var _$$slick;
+$('.slider').slick((_$$slick = {
+  adaptiveHeight: true,
+  slidesToShow: 2,
+  slidesToScroll: 2
+}, _defineProperty(_$$slick, "adaptiveHeight", false), _defineProperty(_$$slick, "responsive", [{
+  breakpoint: 900,
+  settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+}, {
+  breakpoint: 575,
+  settings: {
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: true
+  }
+}, {
+  breakpoint: 420,
+  settings: {
+    arrows: false,
+    autoplay: false,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    dots: true,
+    adaptiveHeight: true
+  }
+}]), _$$slick)); //Slider REVIEW
 
-  $(".price__button").hover(function () {
-    $(".price__box").removeClass("border");
-    $(".price__box").addClass("border--xl"), function () {
-      $(".price__box").removeClass("border--xl");
-      $(".price__box").addClass("border");
-    };
-  }); //Slider TEAM
-
-  $('.slider').slick((_$$slick = {
-    adaptiveHeight: true,
-    slidesToShow: 2,
-    slidesToScroll: 2
-  }, _defineProperty(_$$slick, "adaptiveHeight", false), _defineProperty(_$$slick, "responsive", [{
-    breakpoint: 900,
+$('.review__item').slick({
+  centerMode: true,
+  centerPadding: '20px',
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: false,
+  responsive: [{
+    breakpoint: 775,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      dots: true
     }
   }, {
     breakpoint: 575,
     settings: {
-      arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      arrows: false,
       dots: true
     }
-  }, {
-    breakpoint: 420,
-    settings: {
-      arrows: false,
-      autoplay: true,
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      dots: true,
-      adaptiveHeight: true
-    }
-  }]), _$$slick)); //Slider REVIEW
-
-  $('.review__item').slick({
-    centerMode: true,
-    centerPadding: '20px',
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    responsive: [{
-      breakpoint: 775,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    }, {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true
-      }
-    }],
-    arrows: true,
-    asNavFor: '.review__content',
-    adaptiveHeight: false
-  });
-  $('.review__content').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    draggable: false,
-    fade: true,
-    asNavFor: '.review__item',
-    adaptiveHeight: false
-  });
+  }],
+  arrows: true,
+  asNavFor: '.review__content',
+  adaptiveHeight: false
+});
+$('.review__content').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  draggable: false,
+  fade: true,
+  asNavFor: '.review__item',
+  adaptiveHeight: false
 });
 
 },{}]},{},[1])

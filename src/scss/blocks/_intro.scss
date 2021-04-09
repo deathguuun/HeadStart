@@ -4,7 +4,6 @@
 	background-position: center;
 	padding-bottom: 234px;
 	margin-top: 145px;
-
 	padding-left: 30px;
 
 	&__title {
@@ -28,6 +27,8 @@
 }
 @include sm-d {
 	.intro {
+		background-size: 150%;
+		background-position: inherit;
 		padding-left: 0px;
 		padding-bottom: 100px;
 		&__title {

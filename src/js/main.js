@@ -28,26 +28,20 @@ $(document).ready(function () {
 		$('.header__burger,.header__menu').toggleClass('active');
 		$('body').toggleClass('lock');
 	})
-})
-$(document).ready(function () {
 	$('.header__link').click(function (event) {
 		$('.header__burger, .header__menu').removeClass('active');
 		$('body').removeClass('lock')
 	});
-});
+})
 
 //PRICE TAB
-
 $(".price .price__lesson").click(function () {
 	$(".price .price__lesson").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
 	$(".price .price__content").hide().eq($(this).index()).fadeIn().css("display", "flex").css("justify-content", "space-around")
 }).eq(0).addClass("active-tab");
 
 
-
-
 //Slider TEAM
-
 $('.slider').slick({
 	adaptiveHeight: true,
 	slidesToShow: 2,
@@ -87,7 +81,6 @@ $('.slider').slick({
 
 
 //Slider REVIEW
-
 $('.review__item').slick({
 	centerMode: true,
 	centerPadding: '20px',
@@ -118,8 +111,6 @@ $('.review__item').slick({
 	adaptiveHeight: false,
 
 });
-
-
 $('.review__content').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
